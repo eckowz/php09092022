@@ -12,10 +12,10 @@
 <body>
 
   <?php
-  $mensagem = 'ola mundo';
-  echo $mensagem;
+    $mensagem = 'ola mundo';
+    echo $mensagem;
   ?>
-  
+
 </body>
 
 </html>
