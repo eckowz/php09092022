@@ -26,7 +26,7 @@
     <?php
     echo "<br>Linha executada:" . __LINE__ . "<br>";
     $nome1 = "TESTE";
-    $nome1 = "Nome:".$nome1;
+    $nome1 = "Nome:" . $nome1;
     $nome1 = strtoupper($nome1);
     echo $nome1;
     ?>
@@ -82,18 +82,6 @@
     $nome = "Júlia";
     $greeting = "Bom dia, $nome";
     echo $greeting;
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
     ?>
   </main>
 </body>
