@@ -22,6 +22,79 @@
     $$var2 = 'Silva';
     echo $sobrenome;
     ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $nome1 = "TESTE";
+    $nome1 = "Nome:".$nome1;
+    $nome1 = strtoupper($nome1);
+    echo $nome1;
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $sigla = 'FBI';
+    str_replace('I', 'C', $sigla);
+    echo $sigla;
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $titulo = "DEVMEDIA";
+    $destaque = true;
+
+    if ($destaque) {
+      echo $titulo;
+    } else {
+      echo strtolower($titulo);
+    }
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $musica = 'Mabataki';
+
+    echo <<<SONG
+    Você está escutando $musica
+    SONG;
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $rg_cpf = "112345667";
+
+    switch (strlen($rg_cpf)) {
+      case 9:
+        echo "Você informou o seu RG";
+        break;
+
+      case 11:
+        echo "Você informou o seu CPF";
+        break;
+
+      default:
+        echo "Documento inválido";
+    }
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $nome = "Júlia";
+    $greeting = "Bom dia, $nome";
+    echo $greeting;
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    ?>
   </main>
 </body>
 
