@@ -158,22 +158,6 @@
     //O valor de $var_2 é convertido para string
     $var_3 = strval($var_2);
     ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
-    ?>
   </main>
 </body>
 
