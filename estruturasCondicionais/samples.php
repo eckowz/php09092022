@@ -180,6 +180,52 @@
       echo "Não";
     }
     ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    function calcular_idade($anoNascimento, $anoAtual)
+    {
+
+      $idade = $anoAtual - $anoNascimento;
+
+
+      if ($idade < 16) {
+
+        $anoVotacao = $anoNascimento + 16;
+
+        echo "Não tem idade mínima para votar, somente em $anoVotacao";
+      } else {
+        echo "Já tem idade para votar";
+      }
+    }
+
+    $anoNascimento  = 2009;
+    $anoAtual = 2015;
+
+    calcular_idade($anoNascimento, $anoAtual);
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    function
+    calcularIMC($peso, $altura)
+    {
+
+      $imc = $peso / ($altura * $altura);
+
+      if ($imc >= 25) {
+        $imcIdeal = $imc - 24.99;
+        $perdaPeso = $imcIdeal * ($altura * $altura);
+        echo "Com $peso Kg é necessário perder $perdaPeso Kg";
+      } else {
+        echo "$peso Kg esta dentro do peso ideal";
+      }
+    }
+
+    $peso      = 93.000;
+    $altura      = 1.79;
+    calcularIMC($peso, $altura);
+    ?>
   </main>
 </body>
 

@@ -79,6 +79,27 @@
 
     var_dump($resultado1);
     ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    define("DISTANCIA", 1000);
+
+    function calculaTempo(&$velocidade)
+    {
+      $tempo = DISTANCIA / $velocidade;
+
+      return $tempo;
+    }
+
+    $velocidade_carro_1 = 50;
+    $velocidade_carro_2 = 100;
+
+    $tempo_1 = calculaTempo($velocidade_carro_1);
+    $tempo_2 = calculaTempo($velocidade_carro_2);
+
+    echo "O carro 1 fez o trajeto em: $tempo_1 s<br>";
+    echo "O carro 2 fez o trajeto em: $tempo_2 s<br>";
+    ?>
   </main>
 </body>
 

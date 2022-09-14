@@ -68,6 +68,75 @@
       echo "Funcionário não encontrado";
     }
     ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $indice = 0;
+
+    $texto = 'carro  velho';
+
+    $tamanho_texto = strlen($texto);
+
+    while ($texto[$indice] != 'h') {
+      $indice++;
+    }
+
+    echo "O número de caracteres é: $indice";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    define('TOTALPONTOS', 54);
+
+    $arremesso = 1;
+    $cesta3pontos = 0;
+    $cestas = 0;
+
+    while ($cestas < TOTALPONTOS) {
+      if ($arremesso % 4 == 0) {
+        $cestas += 3;
+        $cesta3pontos++;
+      } else {
+        $cestas += 2;
+      }
+      $arremesso++;
+    }
+    echo "Cestas de 3 pontos: $cesta3pontos";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $sequencia = '11000000011101';
+    $numerosZero = 0;
+    $numerosUm = 0;
+
+    $tamanho = strlen($sequencia);
+
+    for ($indice = 0; $indice < $tamanho; $indice++) {
+      switch ($sequencia[$indice]) {
+        case '0':
+          $numerosZero++;
+          break;
+        case '1':
+          $numerosUm++;
+          break;
+      }
+    }
+    echo "Total 0 : $numerosZero | Total 1 : $numerosUm";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $pitStop = 0;
+    $totalVoltas = 55;
+    
+    for ($voltas = 0; $voltas <= $totalVoltas; $voltas++) {
+      if ($voltas > 0 and $voltas < $totalVoltas and $voltas % 5 == 0) {
+        $pitStop++;
+      }
+    }
+    echo "Foram feitos $pitStop pit stops durante a corrida";
+    ?>
   </main>
 </body>
 
