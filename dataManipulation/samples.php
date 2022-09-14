@@ -99,11 +99,39 @@
 
     <?php
     echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $data_atual = new DateTime();
+    echo "Data atual: " . $data_atual->format('d-m-Y H:i:s') . "<br>";
+    $data_vencimento = new DateTime('2020-12-31');
+    echo "Data de vencimento: " . $data_vencimento->format('d-m-Y H:i:s') . "<br>";
+
+    $diferenca = $data_vencimento->diff($data_atual);
+    echo "Diferença: " . $diferenca->format('%R%a dias') . "<br>";
+
+    $diferenca_dias = $diferenca->format('%R%a');
+    echo "Diferença_dias: " . $diferenca_dias . "<br>";
+
+    if ($diferenca_dias > 0) {
+      echo "A conta está atrasada!!!!";
+    } else if ($diferenca_dias == 0) {
+      echo "A conta venceu hoje!!!!!!.";
+    } else {
+      echo "A conta ainda não venceu";
+    }
     ?>
 
     <?php
     echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $expedicao = new DateTime();
+    echo "expedicao: " . $expedicao->format('d-m-Y H:i:s') . "<br>";
+    $data_validade = new DateTime();
+    echo "data_validade: " . $data_validade->format('d-m-Y H:i:s') . "<br>";
+    $data_validade->add(new DateInterval(' P5Y '));
+    echo "new data_validade: " . $data_validade->format('d-m-Y H:i:s') . "<br>";
+
+    echo 'CNH expedida em: ' . $expedicao->format('d-m-Y') . '<br>';
+    echo 'Data de validade: ' . $data_validade->format('d-m-Y') . '<br>';
     ?>
+
   </main>
 </body>
 

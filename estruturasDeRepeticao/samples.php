@@ -129,7 +129,7 @@
     echo "<br>Linha executada:" . __LINE__ . "<br>";
     $pitStop = 0;
     $totalVoltas = 55;
-    
+
     for ($voltas = 0; $voltas <= $totalVoltas; $voltas++) {
       if ($voltas > 0 and $voltas < $totalVoltas and $voltas % 5 == 0) {
         $pitStop++;

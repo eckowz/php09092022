@@ -55,6 +55,75 @@
     echo "<br>";
     echo $vendas_prata . " Vendas prata:";
     ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $candidato = array(
+      "nome" => "Fernando Souza",
+      "tecnologias" => array("PHP", "Java", "JavaScript", "Python")
+    );
+    $tecnologias = $candidato['tecnologias'];
+    $tecnologia_busca = "PHP";
+
+    $i = 0;
+
+    while ($i < count($tecnologias)) {
+      echo $tecnologias[$i] . "<br>";
+      if ($tecnologias[$i] == $tecnologia_busca) {
+        echo "O candidato aprovado";
+      }
+      $i++;
+    }
+    ?>
+
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $carro =
+      array(
+        "marca" => "GM",
+        "modelo" => "Onix",
+        "ano" => 2020
+      );
+
+    $ano_busca = 2020;
+    echo $carro["ano"] . "<br>";
+    if ($ano_busca == $carro["ano"]) {
+      echo "Marca: " . $carro['marca'] . "<br>";
+      echo "Modelo: " . $carro['modelo'] . "<br>";
+    } else {
+      echo "Carro não encontrado";
+    }
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+
+    $guias_mobile = ["React Native", "Flutter"];
+    $total_guias =
+      count($guias_mobile);
+
+    for ($i = 0; $i < $total_guias; $i++) {
+      echo $i . ' - ' . $guias_mobile[$i] . '<br>';
+    }
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $lista_compras = [
+      "Batata",
+      "Cenoura",
+      "Laranja",
+      "Coco",
+      "Beterraba"
+    ];
+    for ($i = 0; $i < count($lista_compras); $i++) {
+      echo $lista_compras[$i] . "<br>";
+    }
+    foreach ($lista_compras as $item_lista) {
+      echo $item_lista . "<br>";
+    }
+    ?>
   </main>
 </body>
 
