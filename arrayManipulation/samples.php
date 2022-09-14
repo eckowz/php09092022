@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <title>Index</title>
+  <title>Samples</title>
 </head>
 
 <body>
@@ -30,6 +30,30 @@
         echo "Funcionario: {$funcionario['nome']} - INATIVO<br>";
       }
     }
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $valores_venda = [590.00, 850.00, 150.00, 10.00];
+    $vendas = count($valores_venda);
+    $vendas_ouro = 0;
+    $vendas_prata = 0;
+
+    foreach ($valores_venda as $valor) {
+      if ($valor > 500) {
+        $vendas_ouro++;
+      } else if ($valor > 200) {
+        $vendas_prata++;
+      }
+    }
+
+    echo "Resumo de vendas:";
+    echo "<br>";
+    echo "Total de vendas: " . $vendas;
+    echo "<br>";
+    echo $vendas_ouro . " Vendas ouro:";
+    echo "<br>";
+    echo $vendas_prata . " Vendas prata:";
     ?>
   </main>
 </body>
