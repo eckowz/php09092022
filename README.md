@@ -1,5 +1,5 @@
-# Shor page description
-> Short blurb about what your product does.
+# Repositório para aprendizado de php
+> O códigos desse repositório são em sua maioria de autoria da Devmedia com modificações e inclusões feitas por mim durante o curso de PHP.
 
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
@@ -11,6 +11,8 @@
 ## Usage
 
 O propósito deste repositório registro de atividades relacionadas ao aprendizado de php.
+
+--Cada diretório opera como um projeto auto-contido e o conteúdo deve ser executado individualmente.
 
 ## Development setup
 
