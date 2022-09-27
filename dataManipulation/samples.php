@@ -27,47 +27,11 @@
 
     <?php
     echo "<br>Linha executada:" . __LINE__ . "<br>";
-    $data_atual = getdate();
-    print_r($data_atual);
-    echo "<br>";
-    $dia_semana = date("w");
-    print_r("Dia da semana: " . $dia_semana);
-    echo "<br>";
-
-    switch ($dia_semana) {
-      case 0:
-        echo "Domingo";
-        break;
-      case 1:
-        echo "Segunda-feira";
-        break;
-      case 2:
-        echo "Terça-feira";
-        break;
-      case 3:
-        echo "Quarta-feira";
-        break;
-      case 4:
-        echo "Quinta-feira";
-        break;
-      case 5:
-        echo "Sexta-feira";
-        break;
-      case 6:
-        echo "Sábado";
-        break;
-
-
-      default:
-        echo "Dia inválido";
-        break;
-    }
-    ?>
-
-    <?php
-    echo "<br>Linha executada:" . __LINE__ . "<br>";
     $today = getdate();
     $dia_semana = $today['wday'];
+    $dia_mes = $today['mday'];
+    echo "Dia da semana: " . $dia_semana;
+    echo "Dia do mes: " . $dia_mes;
     switch ($dia_semana) {
       case 0:
         echo "Domingo";
@@ -132,6 +96,66 @@
     echo 'Data de validade: ' . $data_validade->format('d-m-Y') . '<br>';
     ?>
 
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $filme = array(
+      "nome" => "Um lugar silencioso 2",
+      "diretor" => "John Krasinski",
+      "lançamento" => 2021
+    );
+
+    $data_atual =
+      new DateTime();
+    $ano_atual = $data_atual->format('Y');
+    $texto = "";
+
+    if ($filme["lançamento"] == $ano_atual) {
+      $texto = "Lançamento do ano dá um play";
+    } else if ($filme["lançamento"] > $ano_atual) {
+      $texto = "Este filme ainda não lançou.";
+    } else {
+      $texto = "Filme disponível para assistir.";
+    }
+
+    echo $texto;
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $valor = random_int(0, 500);
+    $comissao = 0;
+
+    if ($valor <= 100) {
+      $comissao = 0.02;
+    } else if ($valor <= 200) {
+      $comissao = 0.05;
+    } else {
+      $comissao = 0.08;
+    }
+
+    echo "Valor: " . $valor . "<br>";
+    echo "Comissão: " . $comissao . "<br>";
+    echo "Total: " . ($valor * $comissao) . "<br>";
+    ?>
+
+    <?php
+    echo "<br>Linha executada:" . __LINE__ . "<br>";
+    $boleto = array(
+      "titulo" => "Luz",
+      "valor" =>  568,
+      "vencimento" => "2025 -12-01"
+    );
+
+    $hoje = new DateTime();
+    echo "Hoje: " . $hoje->format('d-m-Y H:i:s') . "<br>";
+    $data_vencimento = new Datetime($boleto["vencimento"]);
+    echo "Data de Vencimento: " . $data_vencimento->format('d-m-Y H:i:s') . "<br>";
+    if ($hoje >= $data_vencimento) {
+      echo "Conta vencida";
+    } else {
+      echo "Conta a vencer";
+    }
+    ?>
   </main>
 </body>
 
